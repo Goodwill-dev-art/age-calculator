@@ -44,7 +44,7 @@ const checkDay = function (e) {
 		setTimeInterval(birthMonthEl, birthMonth)
 	}
 }
-const displayError = function (index, textContent) {
+const displayError = function (index= 0, textContent= "must be valid day") {
 	formErrorEl[index].textContent = textContent
 	formErrorEl[index].parentElement.classList.add("error")
 }
@@ -93,18 +93,18 @@ const invalidDate = function () {
 	let checkInvalidDate = true
 
 	if (thirtyDays.includes(month) && day > 30) {
-		displayError(0, `Must be a valid day`)
+		displayError()
 
 		checkInvalidDate = false
 	}
 
 	if (+monthInputValue.value === february && !checkLeapYear(yearInputValue.value) && day > 28) {
-		displayError(0, `Must be a valid day`)
+		displayError()
 		checkInvalidDate = false
 		console.log(checkInvalidDate)
 	}
 	if (+monthInputValue.value === february && checkLeapYear(yearInputValue.value) && day > 29) {
-		displayError(0, `Must be a valid day`)
+		displayError()
 		checkInvalidDate = false
 	}
 
