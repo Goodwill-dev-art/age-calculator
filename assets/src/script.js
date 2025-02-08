@@ -19,6 +19,8 @@ const birthDayEl = document.querySelector("#birth-date")
 const datey = new Date(2024, 3, 31)
 console.log(datey.getDate())
 
+
+
 const checkDay = function (e) {
 	e.preventDefault()
 
@@ -108,7 +110,7 @@ const invalidDate = function () {
 
 	return checkInvalidDate
 }
-
+/**this is me hustkkushshsh */
 const checkYear = function () {
 	let checkYear = true
 	const latestDate = new Date()
