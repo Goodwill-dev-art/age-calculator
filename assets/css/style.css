@@ -1,0 +1,293 @@
+@font-face {
+         font-family:"Poppins-extra-bold" ;
+         src: url(../fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+         font-family:"Poppins-bold" ;
+         src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+         font-family:"Italic-poppins" ;
+         src: url(../fonts/Poppins-ExtraBoldItalic.ttf);
+}
+/* default style  */
+:root {
+          --italic-font:"Italic-poppins";
+         --Extrabold-font: "Poppins-extra-bold";
+         --normalbold: "Poppins-bold" ;
+        
+/*primary color */
+--Purple: hsl(259, 100%, 65%);
+--Light-red: hsl(0, 100%, 67%);
+/*### Neutral  color */
+
+
+--White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%)
+
+}
+
+/* universal selectors   */
+button {
+  cursor: pointer;
+}
+* {
+         padding: 0;
+         margin: 0;
+         box-sizing:inherit;
+}
+html {
+         font-size: 62.5%;  /*1 rem */
+  box-sizing: border-box;
+  height: 100%;
+         
+}
+
+body {
+         font-family: var(--normalbold);
+         font-size: 1.3rem;
+      
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100%;
+
+     background: var(--Light-grey);
+   
+
+}
+
+main {
+         height: 100vh;
+         display: grid;
+       place-content: center;  
+   
+
+       
+       /* background-color: blue; */
+     
+
+}
+/*age calculator container */
+.age__calculator {
+         background-color: var(--White);
+         width:59rem ;
+        
+         padding: 2rem 3rem 3rem 4rem;
+      border-radius:2rem 2rem 20rem 2rem;
+
+
+
+
+}
+
+
+
+.form__container {
+         display: flex;
+         flex-direction: column;
+        
+         width: 24%;;
+        height: 7rem;
+    
+  
+         
+         position: relative;
+}
+.form__error {
+  font-size: 1rem;
+  transform: translateY(-1rem);
+  text-align: center;
+  visibility: hidden;
+  font-family: var(--italic-font);
+}
+
+.form__label {
+         color: var(--Smokey-grey);
+         text-transform: uppercase;
+
+}
+.form__input {
+         font-size: 3.6rem;
+         
+       line-height:  4rem;
+       padding: .7rem;
+
+         font-family: inherit;
+         text-align: center;
+         border-radius: .6rem;
+         border:solid .2rem var(--Light-grey);
+         
+        
+        
+    
+}
+
+.form__input:focus{
+  border: solid .4rem var(--Purple);
+  outline: none;
+  appearance: none;
+  
+
+}
+/* For Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;;
+}
+
+/* For Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form__data {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem ;
+  align-items: center;
+  margin-bottom: 1rem;
+
+
+ 
+}
+.form__submit {
+ 
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .2rem;
+
+
+
+  /* position: relative; */
+
+  
+}
+.form__submitbutton {
+
+
+border: none;
+border-radius:50% ;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: .8rem;
+background-color: var(--Purple);
+
+
+}
+.form__submitbutton:hover{
+  background: var(--Off-black);
+}
+
+.form__borderline{
+  /* border: solid 1rem; */
+flex: 1;
+border: solid .1rem;
+color: var(--Light-grey);
+
+
+}
+
+
+.date-of-birth{
+padding-left: 1rem;
+font-family: var(--italic-font);
+}
+.date-of-birth__h2 {
+  display: flex;
+  align-items: center;
+gap: 2rem;
+  font-size: 5.5rem;
+}
+.date-of-birth__h2 span:not(:last-child) {
+  color: var(--Purple);
+}
+
+@media  (max-width: 600px) {
+  body {
+    font-size: 1rem;
+ 
+  }
+
+  .form {
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .age__calculator {
+    width: 32rem;
+    padding: 0;
+    border-radius: 2rem 2rem 11rem 2rem;
+
+  }
+  .form__data{
+    justify-content: space-between;
+
+    gap: 1rem;
+
+
+
+
+  
+  }
+  .form__container {
+    /* flex: 1; */
+  color: red;
+    gap: .2rem;
+;
+  }
+  .form__input {
+    font-size: .7em;
+    height: 2.7rem
+
+    /* line-height: 3rem; */
+  }
+  .form__submit {;
+  padding: 0;
+  justify-content: center;
+  
+
+  }
+  .form__submitbutton {
+    position: absolute;
+left: 50%;
+transform: translateX(-50%);
+  }
+  img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .date-of-birth__h2 {
+    font-size: 2.9rem;
+
+  }
+  .date-of-birth {
+    padding:1rem 2rem;
+  }
+
+  
+}
+
+/*classlist from javascript */
+
+
+  .error .form__input {
+    border: solid .4rem var(--Light-red);
+  }
+  .error span, .error .form__label  {
+    color: var(--Light-red);
+  }
+  .error span {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform .3s;
+  }

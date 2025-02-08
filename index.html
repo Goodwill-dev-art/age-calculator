@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/src/script.js" defer></script>
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; position: fixed; bottom: 0; width: 100%;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main>
+  <section class="age__calculator">
+
+    <form  class="form">
+      <div class="form__data">
+      <div class="form__container form__container--day">
+      <label for="day" class="form__label">Day</label>
+      <input type="number" id="day" class="form__input form__input--day" autocomplete="off"  placeholder="DD">
+   <span class="form__input--day-error form__error"></span>
+    </div>
+
+    <div class="form__container form__container--month">
+      <label for="month" class="form__label">Month</label>
+      <input type="number" id="month" class="form__input form__input--month" autocomplete="off" placeholder="MM">
+      <span class="form__input--month-Error form__error"></span>
+    </div>
+    <div class="form__container form__container--year">
+      <label for="year" class="form__label">years</label>
+      <input type="number" id="year"  class="form__input form__input--year"    placeholder="YYYY" autocomplete="off">
+      <span class="form__input--year-error form__error"></span>
+    </div>
+  </div>
+    <div class="form__submit">  
+      <span class="form__borderline"></span>
+        <button class="form__submitbutton" id="submit-btn">
+      <img src="./assets/images/icon-arrow.svg" alt="" class="form__submitbutton--img">
+      
+   
+    </button>
+  </div>
+
+    </form>
+
+    <section class="date-of-birth">
+      <h2 class="date-of-birth__h2 date-of-birth__year"><span id="birth-year"> --</span> <span>years</span></h2>
+      <h2 class="date-of-birth__h2 date-of-birth__month"><span id="birth-month">--</span> <span>months</span></h2>
+      <h2 class=" date-of-birth__h2 date-of-birth__day"><span id="birth-date">--</span> <span> days</span></h2>
+    </section>
+  
+
+  </section>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</main>
+
+
+
+ 
+</body>
+</html>
