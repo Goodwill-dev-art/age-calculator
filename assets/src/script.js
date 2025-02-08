@@ -110,6 +110,7 @@ const invalidDate = function () {
 
 	return checkInvalidDate
 }
+const x= "jdjdjdjddjdj"
 const checkYear = function () {
 	let checkYear = true
 	const latestDate = new Date()
